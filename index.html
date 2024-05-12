@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>I Love You Mom!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,900;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #hero {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #set1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        z-index:2;
+        position:absolute;
+      }
+
+      #set2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        z-index:1;
+      }
+
+      #pt1 {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        background: #DBD8B3;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+      }
+
+      #pt2 {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        background: #DBD8B3;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+      }
+
+      #pt3 {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        background: #DBD8B3;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+      }
+
+      #pt4 {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        background: #DBD8B3;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+      }
+
+      .title {
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-size: 350%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: #685369;
+        z-index:1;
+      }
+
+      .special {
+        font-family: "Cedarville Cursive", cursive;
+        font-weight: 400;
+        font-style: normal;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 250%;
+        color: #ee2e64;
+        z-index:1;
+      }
+
+      .space {
+        margin-top: 20%;
+      }
+
+      .card {
+        width: 30%;
+        height: 45%;
+        background: #EFA48B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        transition: 1s;
+      }
+
+      .card:hover {
+        width: 35%;
+        height: 50%;
+        background: #EFA48B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        transition: 1s;
+        box-shadow: #EFA48B 0px 7px 29px 0px;
+      }
+
+      #svg1 {
+        height: 50%;
+        fill: #DBD8B3;
+      }
+
+      .cardtxt {
+        color: #DBD8B3;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        margin-right: 5%;
+      }
+
+      .fadeout {
+        animation: fade 1s forwards;
+      }
+      
+      .fadein {
+        z-index:0 !important;
+      }
+      
+
+      @keyframes fade {
+        100% {
+          opacity: 0%;
+        }
+
+        0% {
+          opacity: 100%;
+        }
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(90vw);
+        }
+
+        100% {
+          transform: translateX(-220%);
+        }
+      }
+      
+      @keyframes hg {
+        0% {
+          font-size:300%;
+        }
+        
+        100% {
+          font-size:600%;
+        }
+      }
+
+      .paratxt {
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        font-size: 100%;
+        color: #685369;
+        width: 85%;
+        text-align: center;
+        margin-top: 20%;
+        z-index:1;
+      }
+
+      .specialr {
+        font-family: "Rubik", sans-serif;
+        font-weight: 1000;
+        font-size: 120%;
+        color: #685369;
+        width: 85%;
+        text-align: center;
+        transition: 1s;
+      }
+
+      .specialr:hover {
+        font-family: "Rubik", sans-serif;
+        font-weight: 1000;
+        font-size: 140%;
+        color: #685369;
+        width: 85%;
+        text-align: center;
+      }
+
+      .fancy {
+        width: 85%;
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .marqq {
+        animation: marquee 25s linear infinite;
+
+      }
+
+      .marq {
+        margin-right: 5%;
+        color: #695968;
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        font-size: 90%;
+        color: #685369;
+        width: 85%;
+        text-align: center;
+        margin-top: 20%;
+      }
+
+      #specialmessage {
+        margin-right: 5%;
+        color: #695968;
+        font-family: "Cedarville Cursive", cursive;
+        font-weight: 400;
+        font-size: 140%;
+        color: #685369;
+        width: 85%;
+        text-align: center;
+        margin-top: 20%;
+      }
+      
+      .sepimg{
+        position:absolute;
+        z-index:0;
+        font-size:300%;
+        animation: hg 2s infinite;
+      }
+      
+      #specimg {
+        position:absolute;
+        width:100%;
+        height:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        z-index:0;
+      }
+      
+      img {
+        margin-left:7%;
+        height:70%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="hero">
+      <div id="set1">
+        <div id="pt1">
+          <p class="title space">
+            HAPPY
+          </p>
+          <p class="special">
+            MOTHERS
+          </p>
+          <p class="title">
+            DAY
+          </p>
+        </div>
+        <div id="pt2">
+          <div class="card" id="card1">
+            <p class="cardtxt">
+              Continue
+            </p>
+            <svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
+          </div>
+        </div>
+      </div>
+      <div id="set2" class="hidden">
+      <div class="sepimg">
+      ❤️
+      </div>
+        <div id="pt3">
+          <p class="paratxt">
+            Happy <strong class="specialr">Mothers</strong> day <strong class="specialr"> mommy! </strong> <br> I just want you to know that your the best <strong class="specialr">mom</strong> in the entire world! <br> Janelle and I love you so much! <br> We love and apreciate everything that you do for use (even though we might seem like we don't sometimes 😁😅). <br> We love you and have a great <strong class="specialr">mothers</strong> day!
+          </p>
+        </div>
+        <div id="pt4">
+          <div behavior='scroll' direction='left' class="fancy">
+            <p class="marqq">
+              <span class="marq"> Te quiero </span> <span class="marq"> Je t'aime </span> <span class="marq"> أحبك </span><span class="marq"> Ich liebe dich </span> <span class="marq"> Ti amo </span> <span class="marq"> Я тебя люблю </span> <span class="marq"> 愛してる </span> <span class="marq">我爱你</span> <span class="marq"> 사랑해 </span> <span id="specialmessage"> We Love You ❤️ - Jason & Janelle</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // getting elements
+      const card = document.getElementById("card1")
+      const s1 = document.getElementById("set1")
+      const s2 = document.getElementById("set2")
+      //event listeners
+      card.addEventListener("click", function() {
+        s1.classList.add("fadeout")
+        setTimeout(function(){
+				s1.classList.add("fadein")
+        }, 1001)
+      })
+
+    </script>
+  </body>
+
+</html>
